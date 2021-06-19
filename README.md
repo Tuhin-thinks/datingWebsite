@@ -31,6 +31,7 @@ Step 6:  To reset the admin **password**:
 * The main page http://localhost:8000/    
 * **Member list** http://localhost:8000/user/list/
 * **Django Administration** to add/edit/delete users http://localhost:8000/admin/
+* **sign up/login page** (login to be made usable very shortable) http://localhost:8000/signup/
 
 
 If you face any problem, come and chat with us at [activecat_dating@Telegram](https://t.me/activecat_dating)
