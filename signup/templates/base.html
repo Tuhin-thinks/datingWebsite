@@ -1,81 +1,60 @@
-{% block login_block %}
-<div class="login-signup l-attop" id="login">
-    <div class="login-signup-title">
-        LOG IN
-    </div>
-    <div class="login-signup-content">
-        <div class="input-name">
-            <h2>Username</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> 
+    {% block head_load %}
+    {% comment %} load jquery {% endcomment %}
+    {% endblock %}
+</head>
 
-        </div>
-        <input type="text" name="username" value="" class="field-input" />
-        <div class="input-name input-margin">
-            <h2>Password</h2>
+{% block custom_styles %}{% endblock %}
 
-        </div>
-        <input type="text" name="password" value="" class="field-input" />
-        <div class="input-r">
-
-
-            <div class="check-input">
-                <input type="checkbox" id="remember-me-2" name="rememberme" value="" class="checkme">
-                <label class="remmeberme-blue" for="remember-me-2"></label>
+<body>
+    {% block body %}
+        {% block login_block %}
+            <div class="login-signup l-attop" id="login">
+                <div class="login-signup-title">
+                    LOG IN
+                </div>
+                <div class="login-signup-content">
+                    <div class="input-name">
+                        <h2>Username</h2>
+            
+                    </div>
+                    <input type="text" name="username" value="" class="field-input" />
+                    <div class="input-name input-margin">
+                        <h2>Password</h2>
+            
+                    </div>
+                    <input type="text" name="password" value="" class="field-input" />
+                    <div class="input-r">
+            
+            
+                        <div class="check-input">
+                            <input type="checkbox" id="remember-me-2" name="rememberme" value="" class="checkme">
+                            <label class="remmeberme-blue" for="remember-me-2"></label>
+                        </div>
+                        <div class="rememberme"><label for="remember-me-2">Remember Me</label></div>
+                    </div>
+                    <button class="submit-btn">
+                        Enter
+                    </button>
+            
+            
+                    <div class="forgot-pass">
+                        <a href="#">Forgot Password?</a>
+                    </div>
+            
+                </div>
             </div>
-            <div class="rememberme"><label for="remember-me-2">Remember Me</label></div>
-        </div>
-        <button class="submit-btn">
-            Enter
-        </button>
+        {% endblock login_block %}
+        
+        {% block signup_block %}{% endblock signup_block %}
+    {% endblock body %}
+</body>
+    {% block scripts %}{% endblock %}
 
-
-        <div class="forgot-pass">
-            <a href="#">Forgot Password?</a>
-        </div>
-
-    </div>
-</div>
-{% endblock %}
-
-{% block signup_block %}
-<div class="login-signup s-atbottom" id="signup">
-    <div class="login-signup-title">
-        SIGN UP
-    </div>
-    <div class="login-signup-content">
-
-        <div class="input-name input-margin">
-            <h2>First Name</h2>
-        </div>
-        {{ forms.fname }}
-
-        <div class="input-name input-margin">
-            <h2>Last Name</h2>
-        </div>
-        {{ forms.lname }}
-
-        <div class="input-name">
-            <h2>Username</h2>
-        </div>
-        {{ forms.username }}
-
-        <div class="input-name input-margin">
-            <h2>E-Mail</h2>
-        </div>
-        {{ forms.email }}
-
-        <div class="input-name input-margin">
-            <h2>Password</h2>
-        </div>
-        {{ forms.password1 }}
-
-        <div class="input-name input-margin">
-            <h2>Confirm Password</h2>
-        </div>
-        {{ forms.password2 }}
-
-        <button class="submit-btn">Enter</button>
-
-
-    </div>
-</div>
-{% endblock %}
+</html>
